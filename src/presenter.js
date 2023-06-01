@@ -1,8 +1,8 @@
-import sumar from "./sumador";
+import {Tienda,Cambio} from "./tienda.js";
 
 const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const form = document.querySelector("#calcular-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
@@ -10,6 +10,10 @@ form.addEventListener("submit", (event) => {
 
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  if(first.value===""||second.value===""){
+    alert("Debe ingresar el monto y el efectivo");
+    return;
+  }
+  
+  div.innerHTML = "<p>" + Cambio([firstNumber, secondNumber]) + "</p>";
 });
