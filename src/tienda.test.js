@@ -1,4 +1,4 @@
-import {Tienda,Cambio} from "./tienda.js";
+import {Tienda,Cambio,cambioDeMoneda} from "./tienda.js";
 
 describe("Ingresar Montos", () => {
   it("deberia ingresar un monto y devolverlo", () => {
@@ -11,3 +11,10 @@ describe("Ingresar Montos", () => {
     expect(Cambio([10,20])).toEqual(10);
   });
 });
+describe("Ingresar Montos", () => {
+    it('debería devolver [5, 5, 5, 2, 2] al pasar 19', () => {
+        const resultado = cambioDeMoneda(19);
+        expect(resultado).toEqual([5, 5, 5, 2, 2]);
+    });
+   
+  });
