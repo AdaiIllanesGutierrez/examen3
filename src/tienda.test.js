@@ -16,5 +16,9 @@ describe("Ingresar Montos", () => {
         const resultado = cambioDeMoneda(19);
         expect(resultado).toEqual([5, 5, 5, 2, 2]);
     });
+    it('debería devolver [5, 5, 2, 1] al pasar 13', () => {
+        const resultado = cambioDeMoneda(13);
+        expect(resultado).toEqual([5, 5, 2, 1]);
+    });
    
   });
