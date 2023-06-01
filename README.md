@@ -15,3 +15,5 @@ npm run test-once
 
 Iniciar 
 primer commit ejercicio 1
+Iniciar 
+primer commit ejercicio 2
